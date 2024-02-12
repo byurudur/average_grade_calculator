@@ -2,7 +2,6 @@
  * @author Ahmet Batuhan YÜRÜDÜR, 2024
  */
 
-
 import java.util.Scanner;
 
 class Main{
