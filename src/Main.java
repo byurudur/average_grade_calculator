@@ -1,24 +1,43 @@
+/**
+ * @author Ahmet Batuhan YÜRÜDÜR, 2024
+ */
+
+
 import java.util.Scanner;
 
 class Main{
 
     public static void main(String[] args) {
 
-        //Average grade calculator, works with the inputs from the user.
+        // Average grade calculator, works with the inputs from the user.
+        // Value assignments.
         Scanner input = new Scanner(System.in);
-
-        //Taking the values.
+        double grade1, grade2, grade3, passGrade ;
+        double percent1, percent2, percent3;
+        // Taking the needed values.
         System.out.println("Please insert your first grade; ");
-        int grade1 = input.nextInt();
+        grade1 = input.nextInt();
+        System.out.println("What is the determined percentage for " + grade1);
+        percent1 = input.nextInt();
         System.out.println("Please insert your second grade; ");
-        int grade2 = input.nextInt();
+        grade2 = input.nextInt();
+        System.out.println("What is the determined percentage for " + grade2);
+        percent2 = input.nextInt();
         System.out.println("Please insert your third grade; ");
-        int grade3 = input.nextInt();
+        grade3 = input.nextInt();
+        System.out.println("What is the determined percentage for " + grade3);
+        percent3 = input.nextInt();
         System.out.println("Please insert the pass grade; ");
-        int passGrade = input.nextInt();
+        passGrade = input.nextInt();
 
-        //For average value, we determine the "averageGrade" and calculate.
-        int averageGrade = (grade1+grade2+grade3)/3;
+        // Calculating the percentages and finding the actual grade.
+        double realGrade1, realGrade2, realGrade3, averageGrade;
+        realGrade1 = grade1 * (percent1 / 100);
+        realGrade2 = grade2 * (percent2/ 100);
+        realGrade3 = grade3 * (percent3 / 100);
+
+        // For average value, we determine the "averageGrade" and calculate.
+        averageGrade = (realGrade1 + realGrade2 + realGrade3)/3;
 
         //Print output to the user.
         System.out.println( "Your average grade is " + (averageGrade)/3 + "." );
