@@ -3,6 +3,7 @@
  * @since 2024
  */
 
+
 import java.util.Scanner;
 
 class Main{
